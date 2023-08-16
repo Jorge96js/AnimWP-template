@@ -29,7 +29,7 @@
 iframe{
     width: 100%;
     min-height: 20rem;
-    max-height: 50rem;
+    height: 50rem;
 }
 
 html {
@@ -47,7 +47,18 @@ html {
     padding: 10rem 0;
   }
 
+  /**Btones**/
 
+
+  .btn{
+    display: inline-block;
+    border: none;
+    background-color: var(--gris-oscuro);
+    padding: .3rem;
+    color: var(--gris-claro);
+    cursor: pointer;
+    margin: .5rem 1rem;
+  }
 body{
     font-family: var(--fuente-principal);
     font-size: 1.8rem;
@@ -450,4 +461,11 @@ img{
 .swiper-scrollbar-horizontal{
     background: var(--gris-claro);
     opacity: 1!important;
+}
+
+
+/**capitulos**/
+
+.server-nav{
+    background-color: #0B0B0B;
 }

@@ -35,4 +35,14 @@ const AnimWP = () => {
     }
 };
 
+const serverBtn = document.querySelectorAll('.btn-server');
+const iframe = document.getElementById('iframe');
+
+serverBtn.forEach((boton)=>{
+    boton.addEventListener('click', ()=>{
+        const link = boton.getAttribute('data-enlace');
+        iframe.setAttribute('src', link);
+    });
+});
+
 document.addEventListener("DOMContentLoaded", AnimWP);
