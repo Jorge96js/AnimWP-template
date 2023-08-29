@@ -19,7 +19,7 @@
             </nav>
                 <iframe id="iframe" class="iframe"  src="<?php echo $default?>" frameborder="0" allowfullscreen></iframe>
         </section>
-        <?php get_sidebar()?>
+        <?php // get_sidebar()?>
     </main>
 
 <?php get_footer();?>

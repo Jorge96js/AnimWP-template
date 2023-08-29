@@ -49,3 +49,27 @@
     }
 
     add_action('widgets_init','animwp_theme_widgets');
+
+
+    //taxonomia para los animes
+
+    function animwp_anime_name(){
+        $tags = array(
+            'name' =>__('Anime_name')
+        );
+
+        register_taxonomy(
+            'anime',
+            array('animwp_capitulos'),
+            array(
+                'hierarchical' => true,
+                'labels' => $tags,
+                'show_ui' => true,
+                'show_admin_column' => true,
+                'query_var' => true,
+                'rewrite' => array('slug' => 'anime'),
+            )
+            );
+    }
+
+    add_action( 'init', 'animwp_anime_name' );

@@ -27,6 +27,23 @@
         </div>
     </div>
     <?php if(is_front_page()):?>
-    <header class="header">
+    <header class="header swiper">
+        <ul class="recents-slider swiper-wrapper">
+            <?php
+                $args = array(
+                    'post_type' => 'animwp_capitulos',
+                    'posts_per_page' => 5
+                );
+        
+                    $capitulos = new WP_Query($args);
+                    while ($capitulos->have_posts()):
+                        $capitulos->the_post();
+            ?>
+                <li class="swiper-slide">
+                    <h4 class="text-white"><?php the_title();?></h4>  
+                    <img src="<?php echo get_field('cover')?>" alt="">
+                </li>
+                <?php endwhile;?>
+            </ul>
     </header>
     <?php endif;?>

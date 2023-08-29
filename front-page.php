@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-    <section class="carrusel swiper mySwiper">
+    <section class="carrusel ">
         <ul class="lista-carrusel swiper-wrapper">
         <?php
             $args = array(
@@ -11,10 +11,10 @@
             $capitulos = new WP_Query($args);
 
             while ($capitulos->have_posts()):
-                $capitulos->the_post();
+                   $capitulos->the_post();
         ?>
             <!--//card que contiene las entradas-->
-            <li class="card_carrusel swiper-slide">
+            <li class="card_carrusel">
                 <a href="<?php the_permalink();?>">
                 <?php the_post_thumbnail();?>
                 </a>
@@ -24,8 +24,9 @@
             wp_reset_postdata();
         ?>
         </ul>
-        <div class="swiper-scrollbar"></div>
     </section>
+
+
     <main class="contenedor con-sidebar">
 
         <section class="seccion">

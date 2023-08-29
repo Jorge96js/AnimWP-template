@@ -14,8 +14,8 @@ class AnimWP_Widget extends WP_Widget {
 
 	public function widget( $args, $instance ) {
         ?>
-			<ul class="sidebar_class">
 				<h4 class="text-white">Capitulos de hoy:</h4>
+			<ul>
 				<?php
 					$args = array(
 						'post_type' => 'animwp_capitulos',
